@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-shine: shine 4s linear infinite;
+  /* Random travel animations with prime number durations for non-repeating patterns */
+  --animate-border-travel-1: border-travel-cw 17s linear infinite;
+  --animate-border-travel-2: border-travel-ccw 23s linear infinite;
+  --animate-border-travel-3: border-travel-cw 29s linear infinite;
+
+  @keyframes shine {
+    0% {
+      left: -50%;
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    90% {
+      opacity: 1;
+    }
+
+    100% {
+      left: 150%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes border-travel-cw {
+    to {
+      stroke-dashoffset: -2300;
+    }
+  }
+
+  @keyframes border-travel-ccw {
+    to {
+      stroke-dashoffset: 2300;
+    }
+  }
+}
