@@ -1,4 +1,5 @@
-import { BorderGlowBox } from './components/BorderGlowBox'
+import { BorderGlowBox } from "./components/BorderGlowBox";
+import { VictoryConditionsPanel } from "./components/VictoryConditionsPanel";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <div className="flex-1 h-[70%] w-full flex px-12 pt-10 pb-4">
           <div className="w-1/4 flex flex-col gap-8">
             <div className="flex-1 w-full">
-              <BorderGlowBox lightColor="white" />
+              <VictoryConditionsPanel />
             </div>
             <div className="flex-1 w-full">
               <BorderGlowBox lightColor="white" />
@@ -27,18 +28,12 @@ function App() {
           <div className="w-1/2" />
 
           <div className="w-1/4 flex flex-col gap-8">
-            <div className="flex-[2] w-full">
-              <BorderGlowBox lightColor="white" />
+            <div className="flex-2 w-full">
+              <BorderGlowBox />
             </div>
 
             <div className="flex-1 w-full py-28">
-              <BorderGlowBox
-                borderColor="#ef4444"
-                borderOpacity={0.2}
-                lightColor="#ef4444"
-                glowWidth={5}
-                glowInset={0}
-              />
+              <BorderGlowBox borderColor="#972B2B" lightColor="#ef4444" />
             </div>
           </div>
         </div>
@@ -46,7 +41,7 @@ function App() {
         <div className="h-[30%] w-full" />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
